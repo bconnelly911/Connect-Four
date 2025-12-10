@@ -22,7 +22,12 @@ int main () {
         print(board);
         
         while(winner == 0 && moves_made < 42){
-            printf("Please enter a move:\n>>> ");
+            if (turn == 1) {
+                printf("Player 1 (x), please enter a move (1-7):\n>>>");
+            }
+            else {
+                printf("Player 2 (o), please enter a move (1-7):\n>>>"); 
+            }
             scanf(" %s", user_move_input_char);
             
             if(!strcmp("1", user_move_input_char) ||!strcmp("2", user_move_input_char)||!strcmp("3", user_move_input_char)||!strcmp("4", user_move_input_char)||!strcmp("5", user_move_input_char)||!strcmp("6", user_move_input_char)||!strcmp("7", user_move_input_char)) {
